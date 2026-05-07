@@ -1,0 +1,144 @@
+:root{
+  /*COLORES*/
+  --bg-start:    #1a0a2e;
+  --bg-mid:      #3b0a2f;
+  --bg-end:      #1a0a08;
+  --accent:      #c77dff;
+  --accent2:     #e0aaff;
+  --text-main:   #f0e8ff;
+  --text-dim:    #b8a9cc;
+  --card-bg:     rgba(255,255,255,0.04);
+  --border:      rgba(120,40,100,0.55);
+  --shadow:      0 8px 40px rgba(0,0,0,0.55);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-mid) 45%, var(--bg-end) 100%);
+  background-attachment: fixed;
+  font-family: 'Google Sans', monospace;
+  color: var(--text-main);
+}
+body::before{
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+}
+/* ── HERO ── */
+.hero {
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeUp 1s ease both;
+    /*FLEXBOX*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-label {
+  font-family: 'Google Sans', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.hero h1 {
+  font-family: 'Lobster', sans-serif;
+  font-size: clamp(2.8rem, 8vw, 5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  background: linear-gradient(130deg, #e0aaff 30%, #ff85c2 70%, #ffb347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1rem;
+}
+
+.hero-firma {
+  font-family: 'Kings', sans-serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--text-dim);
+  letter-spacing: 0.04em;
+}
+
+.hero-sig::before { content: '— '; }
+
+nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border-color: var(--border);
+  background: var(--card-bg);
+}
+
+.iniciales {
+  margin-right: auto;
+  color: var(--accent);
+  font-family: 'kings', serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card-bg);
+}
+
+.foto-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 3rem 0;
+}
+
+.foto-perfil img {
+  width: auto;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.foto-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.8;
+}
