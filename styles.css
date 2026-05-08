@@ -279,7 +279,6 @@ nav a:hover {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 0.2rem 0.6rem;
-  margin-bottom: 0.8rem;
 }
 
 /* ── REDES ── */
@@ -398,13 +397,4 @@ nav a:hover {
   .red-label {
     min-width: unset;
   }
-  
-  .proyecto-enlace {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 0.8rem;
-  text-decoration: dotted;
-}
-
 }
