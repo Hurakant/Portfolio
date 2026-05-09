@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Kings&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Antonio Mosquera</title>
 </head>
 <body>
-	
-	<nav>
+
+  <nav>
     <span class="iniciales">AM</span>
     <a href="index.html">Antonio</a>
     <a href="informacion.html">Sobre mí</a>
@@ -17,6 +22,52 @@
     <a href="contacto.html">Contactame</a>
   </nav>
 
-	
+  <main>
+    <section class="pagina">
+
+      <p class="pagina-subtitulo">Escribime</p>
+      <h1 class="pagina-titulo">Contacto</h1>
+
+      <div class="card">
+        <p class="card-titulo">Formulario de contacto</p>
+
+        <div data-fs-success class="form-exito">
+          ¡Mensaje enviado! Te respondo a la brevedad.
+        </div>
+        <div data-fs-error class="form-error-global"></div>
+
+        <form id="formulario-contacto" class="form-contacto">
+
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" data-fs-field required>
+            <span data-fs-error="nombre" class="form-error"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@mail.com" data-fs-field required>
+            <span data-fs-error="email" class="form-error"></span>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje..." data-fs-field required></textarea>
+            <span data-fs-error="mensaje" class="form-error"></span>
+          </div>
+
+          <button type="submit" data-fs-submit-btn>Enviar</button>
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#formulario-contacto', formId: 'mkoyqdkd' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </body>
 </html>
